@@ -173,7 +173,7 @@
                     desc: 'Our journey continues'
                 },
                 {
-                    src: 'images/IMG4.jpg',
+                    src: 'images/IMG8.jpg',
                     title: 'First Date',
                     desc: 'Where it all began'
                 },
@@ -183,7 +183,7 @@
                     desc: 'The magical moment'
                 },
                 {
-                    src: 'images/IMG8.jpg',
+                    src: 'images/IMG4.jpg',
                     title: 'Celebration',
                     desc: 'With family and friends'
                 }
@@ -218,9 +218,7 @@
                     galleryGrid.appendChild(galleryItem);
                     
                     // Add animation with delay
-                    setTimeout(() => {
-                        galleryItem.classList.add('animate');
-                    }, i * 200);
+
                 }
                 
                 // Update button states
