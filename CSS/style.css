@@ -2203,7 +2203,7 @@
     transform: translateX(-100%);
 }
 
-.flower-petals:after {
+/* .flower-petals:after {
     content: '🌸🌺💮🏵️🌷🌹🥀🌻🌼';
     position: absolute;
     font-size: 24px;
@@ -2211,4 +2211,4 @@
     animation: float 25s linear infinite reverse;
     transform: translateX(100%);
     bottom: 0;
-}
+} */

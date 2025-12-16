@@ -484,75 +484,75 @@
         // ============================================
         // ANIMATION EFFECTS
         // ============================================
-        function createConfetti(count = 50) {
-            const container = document.getElementById('confetti-container');
-            const colors = [
-                '#d46ba6', '#d4af37', '#2c3e50', '#ffffff', 
-                '#ff6b6b', '#4ecdc4', '#ffe66d', '#95e1d3'
-            ];
+        // function createConfetti(count = 50) {
+        //     const container = document.getElementById('confetti-container');
+        //     const colors = [
+        //         '#d46ba6', '#d4af37', '#2c3e50', '#ffffff', 
+        //         '#ff6b6b', '#4ecdc4', '#ffe66d', '#95e1d3'
+        //     ];
             
-            const shapes = ['❤️', '💕', '💍', '🌸', '✨', '🎉', '💫', '🌟'];
+        //     const shapes = ['❤️', '💕', '💍', '🌸', '✨', '🎉', '💫', '🌟'];
             
-            for (let i = 0; i < count; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
+        //     for (let i = 0; i < count; i++) {
+        //         const confetti = document.createElement('div');
+        //         confetti.className = 'confetti';
                 
-                // Random properties
-                const size = Math.random() * 20 + 10;
-                const left = Math.random() * 100;
-                const animationDuration = Math.random() * 3 + 2;
-                const animationDelay = Math.random();
-                const shape = shapes[Math.floor(Math.random() * shapes.length)];
+        //         // Random properties
+        //         const size = Math.random() * 20 + 10;
+        //         const left = Math.random() * 100;
+        //         const animationDuration = Math.random() * 3 + 2;
+        //         const animationDelay = Math.random();
+        //         const shape = shapes[Math.floor(Math.random() * shapes.length)];
                 
-                // Apply styles
-                confetti.innerHTML = shape;
-                confetti.style.fontSize = `${size}px`;
-                confetti.style.left = `${left}%`;
-                confetti.style.top = '-50px';
-                confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+        //         // Apply styles
+        //         confetti.innerHTML = shape;
+        //         confetti.style.fontSize = `${size}px`;
+        //         confetti.style.left = `${left}%`;
+        //         confetti.style.top = '-50px';
+        //         confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
                 
-                // Apply animation
-                confetti.style.animation = `confettiFall ${animationDuration}s ease-out ${animationDelay}s forwards`;
-                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+        //         // Apply animation
+        //         confetti.style.animation = `confettiFall ${animationDuration}s ease-out ${animationDelay}s forwards`;
+        //         confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
                 
-                // Add to container
-                container.appendChild(confetti);
+        //         // Add to container
+        //         container.appendChild(confetti);
                 
-                // Remove after animation
-                setTimeout(() => {
-                    confetti.remove();
-                }, (animationDuration + animationDelay) * 1000);
-            }
-        }
+        //         // Remove after animation
+        //         setTimeout(() => {
+        //             confetti.remove();
+        //         }, (animationDuration + animationDelay) * 1000);
+        //     }
+        // }
         
-        function createFloatingHearts(count = 3) {
-            for (let i = 0; i < count; i++) {
-                const heart = document.createElement('div');
-                heart.innerHTML = '❤️';
-                heart.style.position = 'fixed';
-                heart.style.fontSize = '20px';
-                heart.style.color = '#ff6b6b';
-                heart.style.zIndex = '1';
-                heart.style.pointerEvents = 'none';
-                heart.style.left = `${Math.random() * 100}%`;
-                heart.style.top = '100%';
-                heart.style.opacity = '0.7';
+        // function createFloatingHearts(count = 3) {
+        //     for (let i = 0; i < count; i++) {
+        //         const heart = document.createElement('div');
+        //         heart.innerHTML = '❤️';
+        //         heart.style.position = 'fixed';
+        //         heart.style.fontSize = '20px';
+        //         heart.style.color = '#ff6b6b';
+        //         heart.style.zIndex = '1';
+        //         heart.style.pointerEvents = 'none';
+        //         heart.style.left = `${Math.random() * 100}%`;
+        //         heart.style.top = '100%';
+        //         heart.style.opacity = '0.7';
                 
-                document.body.appendChild(heart);
+        //         document.body.appendChild(heart);
                 
-                // Animate
-                const duration = Math.random() * 3 + 2;
-                heart.style.animation = `confettiFall ${duration}s ease-out forwards`;
-                heart.style.transform = `translateX(${Math.random() * 100 - 50}px)`;
+        //         // Animate
+        //         const duration = Math.random() * 3 + 2;
+        //         heart.style.animation = `confettiFall ${duration}s ease-out forwards`;
+        //         heart.style.transform = `translateX(${Math.random() * 100 - 50}px)`;
                 
-                // Remove after animation
-                setTimeout(() => {
-                    heart.remove();
-                }, duration * 1000);
-            }
-        }
+        //         // Remove after animation
+        //         setTimeout(() => {
+        //             heart.remove();
+        //         }, duration * 1000);
+        //     }
+        // }
         
-        function createMusicalNotes() {
+         function createMusicalNotes() {
             const notes = ['♪', '♫', '♬', '🎵', '🎶'];
             
             for (let i = 0; i < 5; i++) {
@@ -851,243 +851,243 @@ function createParticle(container) {
     }, (duration + delay) * 1000);
 }
 
-function createHeartParticle(container) {
-    const heart = document.createElement('div');
-    heart.classList.add('heart-particle');
-    heart.innerHTML = '❤️';
+// function createHeartParticle(container) {
+//     const heart = document.createElement('div');
+//     heart.classList.add('heart-particle');
+//     heart.innerHTML = '❤️';
     
-    // Random properties
-    const left = Math.random() * 100;
-    const size = 12 + Math.random() * 20;
-    const duration = 10 + Math.random() * 15;
-    const delay = Math.random() * 20;
+//     // Random properties
+//     const left = Math.random() * 100;
+//     const size = 12 + Math.random() * 20;
+//     const duration = 10 + Math.random() * 15;
+//     const delay = Math.random() * 20;
     
-    heart.style.cssText = `
-        left: ${left}%;
-        font-size: ${size}px;
-        animation-duration: ${duration}s;
-        animation-delay: ${delay}s;
-        animation-timing-function: linear;
-    `;
+//     heart.style.cssText = `
+//         left: ${left}%;
+//         font-size: ${size}px;
+//         animation-duration: ${duration}s;
+//         animation-delay: ${delay}s;
+//         animation-timing-function: linear;
+//     `;
     
-    container.appendChild(heart);
+//     container.appendChild(heart);
     
-    // Recreate heart after animation ends
-    setTimeout(() => {
-        if (heart.parentNode === container) {
-            heart.remove();
-            createHeartParticle(container);
-        }
-    }, (duration + delay) * 1000);
-}
+//     // Recreate heart after animation ends
+//     setTimeout(() => {
+//         if (heart.parentNode === container) {
+//             heart.remove();
+//             createHeartParticle(container);
+//         }
+//     }, (duration + delay) * 1000);
+// }
 
-function createSparkleParticle(container) {
-    const sparkle = document.createElement('div');
-    sparkle.classList.add('sparkle-particle');
-    sparkle.innerHTML = '✨';
+// function createSparkleParticle(container) {
+//     const sparkle = document.createElement('div');
+//     sparkle.classList.add('sparkle-particle');
+//     sparkle.innerHTML = '✨';
     
-    // Random properties
-    const left = Math.random() * 100;
-    const top = Math.random() * 100;
-    const duration = 1 + Math.random() * 3;
-    const delay = Math.random() * 5;
+//     // Random properties
+//     const left = Math.random() * 100;
+//     const top = Math.random() * 100;
+//     const duration = 1 + Math.random() * 3;
+//     const delay = Math.random() * 5;
     
-    sparkle.style.cssText = `
-        left: ${left}%;
-        top: ${top}%;
-        animation-duration: ${duration}s;
-        animation-delay: ${delay}s;
-    `;
+//     sparkle.style.cssText = `
+//         left: ${left}%;
+//         top: ${top}%;
+//         animation-duration: ${duration}s;
+//         animation-delay: ${delay}s;
+//     `;
     
-    container.appendChild(sparkle);
+//     container.appendChild(sparkle);
     
-    // Recreate sparkle after animation ends
-    setTimeout(() => {
-        if (sparkle.parentNode === container) {
-            sparkle.remove();
-            createSparkleParticle(container);
-        }
-    }, (duration + delay) * 1000);
-}
+//     // Recreate sparkle after animation ends
+//     setTimeout(() => {
+//         if (sparkle.parentNode === container) {
+//             sparkle.remove();
+//             createSparkleParticle(container);
+//         }
+//     }, (duration + delay) * 1000);
+// }
 
 // Initialize particles with default medium density
-document.addEventListener('DOMContentLoaded', function() {
-    createParticleAnimation();
+// document.addEventListener('DOMContentLoaded', function() {
+//     createParticleAnimation();
     
-    // Initialize particle controls if they exist
-    const controls = document.querySelector('.particle-controls');
-    if (controls) {
-        initializeParticleControls();
-    }
+//     // Initialize particle controls if they exist
+//     const controls = document.querySelector('.particle-controls');
+//     if (controls) {
+//         initializeParticleControls();
+//     }
     
-    // Performance optimizations
-    optimizeParticles();
+//     // Performance optimizations
+//     optimizeParticles();
     
-    // Interactive particles on click
-    document.addEventListener('click', (e) => {
-        createClickParticles(e.clientX, e.clientY);
-    });
-});
+//     // Interactive particles on click
+//     document.addEventListener('click', (e) => {
+//         createClickParticles(e.clientX, e.clientY);
+//     });
+// });
 
 // Initialize particle controls
-function initializeParticleControls() {
-    const buttons = document.querySelectorAll('.particle-btn');
+// function initializeParticleControls() {
+//     const buttons = document.querySelectorAll('.particle-btn');
     
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Update active button
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+//     buttons.forEach(btn => {
+//         btn.addEventListener('click', () => {
+//             // Update active button
+//             buttons.forEach(b => b.classList.remove('active'));
+//             btn.classList.add('active');
             
-            // Update density
-            particleDensity = btn.dataset.density;
+//             // Update density
+//             particleDensity = btn.dataset.density;
             
-            // Recreate particles with new density
-            createParticleAnimation();
+//             // Recreate particles with new density
+//             createParticleAnimation();
             
-            // Save preference to localStorage
-            localStorage.setItem('particleDensity', particleDensity);
+//             // Save preference to localStorage
+//             localStorage.setItem('particleDensity', particleDensity);
             
-            // Show feedback
-            showParticleFeedback(particleDensity);
-        });
-    });
+//             // Show feedback
+//             showParticleFeedback(particleDensity);
+//         });
+//     });
     
-    // Load saved preference
-    const savedDensity = localStorage.getItem('particleDensity');
-    if (savedDensity) {
-        particleDensity = savedDensity;
-        const activeBtn = document.querySelector(`.particle-btn[data-density="${savedDensity}"]`);
-        if (activeBtn) {
-            buttons.forEach(b => b.classList.remove('active'));
-            activeBtn.classList.add('active');
-            createParticleAnimation();
-        }
-    }
-}
+//     // Load saved preference
+//     const savedDensity = localStorage.getItem('particleDensity');
+//     if (savedDensity) {
+//         particleDensity = savedDensity;
+//         const activeBtn = document.querySelector(`.particle-btn[data-density="${savedDensity}"]`);
+//         if (activeBtn) {
+//             buttons.forEach(b => b.classList.remove('active'));
+//             activeBtn.classList.add('active');
+//             createParticleAnimation();
+//         }
+//     }
+// }
 
 // Show feedback when changing density
-function showParticleFeedback(density) {
-    const messages = {
-        'low': 'Particles set to Low density',
-        'medium': 'Particles set to Medium density',
-        'high': 'Particles set to High density'
-    };
+// function showParticleFeedback(density) {
+//     const messages = {
+//         'low': 'Particles set to Low density',
+//         'medium': 'Particles set to Medium density',
+//         'high': 'Particles set to High density'
+//     };
     
-    // Create feedback element
-    const feedback = document.createElement('div');
-    feedback.textContent = messages[density];
-    feedback.style.cssText = `
-        position: fixed;
-        bottom: 140px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        z-index: 10000;
-        animation: slideUp 0.3s ease, fadeOut 0.3s ease 1.5s forwards;
-    `;
+//     // Create feedback element
+//     const feedback = document.createElement('div');
+//     feedback.textContent = messages[density];
+//     feedback.style.cssText = `
+//         position: fixed;
+//         bottom: 140px;
+//         right: 20px;
+//         background: rgba(0, 0, 0, 0.8);
+//         color: white;
+//         padding: 10px 15px;
+//         border-radius: 8px;
+//         font-size: 0.9rem;
+//         z-index: 10000;
+//         animation: slideUp 0.3s ease, fadeOut 0.3s ease 1.5s forwards;
+//     `;
     
-    document.body.appendChild(feedback);
+//     document.body.appendChild(feedback);
     
-    // Remove after animation
-    setTimeout(() => {
-        feedback.remove();
-    }, 2000);
-}
+//     // Remove after animation
+//     setTimeout(() => {
+//         feedback.remove();
+//     }, 2000);
+// }
 
 // Performance optimization
-function optimizeParticles() {
-    // Reduce particles on low-end devices automatically
-    if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) {
-        console.log('Low-end device detected. Optimizing particles...');
-        particleDensity = 'low';
-        localStorage.setItem('particleDensity', 'low');
+// function optimizeParticles() {
+//     // Reduce particles on low-end devices automatically
+//     if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) {
+//         console.log('Low-end device detected. Optimizing particles...');
+//         particleDensity = 'low';
+//         localStorage.setItem('particleDensity', 'low');
         
-        // Update UI if controls exist
-        const lowBtn = document.querySelector('.particle-btn[data-density="low"]');
-        if (lowBtn) {
-            document.querySelectorAll('.particle-btn').forEach(b => b.classList.remove('active'));
-            lowBtn.classList.add('active');
-        }
+//         // Update UI if controls exist
+//         const lowBtn = document.querySelector('.particle-btn[data-density="low"]');
+//         if (lowBtn) {
+//             document.querySelectorAll('.particle-btn').forEach(b => b.classList.remove('active'));
+//             lowBtn.classList.add('active');
+//         }
         
-        createParticleAnimation();
-    }
+//         createParticleAnimation();
+//     }
     
-    // Reduce particles when tab is hidden
-    document.addEventListener('visibilitychange', () => {
-        const particles = document.querySelectorAll('.particle, .heart-particle, .sparkle-particle');
-        if (document.hidden) {
-            particles.forEach(el => {
-                el.style.animationPlayState = 'paused';
-                el.style.opacity = '0.2';
-            });
-        } else {
-            particles.forEach(el => {
-                el.style.animationPlayState = 'running';
-                el.style.opacity = '';
-            });
-        }
-    });
-}
+//     // Reduce particles when tab is hidden
+//     document.addEventListener('visibilitychange', () => {
+//         const particles = document.querySelectorAll('.particle, .heart-particle, .sparkle-particle');
+//         if (document.hidden) {
+//             particles.forEach(el => {
+//                 el.style.animationPlayState = 'paused';
+//                 el.style.opacity = '0.2';
+//             });
+//         } else {
+//             particles.forEach(el => {
+//                 el.style.animationPlayState = 'running';
+//                 el.style.opacity = '';
+//             });
+//         }
+//     });
+// }
 
-// Interactive click particles (kept from previous code)
-function createClickParticles(x, y) {
-    const container = document.querySelector('.particles-container');
-    const colors = ['#d46ba6', '#d4af37', '#ffffff', '#ff6b6b'];
-    const symbols = ['❤️', '💕', '✨', '🌸', '💫'];
+// // Interactive click particles (kept from previous code)
+// function createClickParticles(x, y) {
+//     const container = document.querySelector('.particles-container');
+//     const colors = ['#d46ba6', '#d4af37', '#ffffff', '#ff6b6b'];
+//     const symbols = ['❤️', '💕', '✨', '🌸', '💫'];
     
-    // Number of click particles based on density
-    let clickCount;
-    switch(particleDensity) {
-        case 'low': clickCount = 5; break;
-        case 'medium': clickCount = 10; break;
-        case 'high': clickCount = 15; break;
-        default: clickCount = 10;
-    }
+//     // Number of click particles based on density
+//     let clickCount;
+//     switch(particleDensity) {
+//         case 'low': clickCount = 5; break;
+//         case 'medium': clickCount = 10; break;
+//         case 'high': clickCount = 15; break;
+//         default: clickCount = 10;
+//     }
     
-    for (let i = 0; i < clickCount; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('heart-particle');
-        particle.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+//     for (let i = 0; i < clickCount; i++) {
+//         const particle = document.createElement('div');
+//         particle.classList.add('heart-particle');
+//         particle.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
         
-        const angle = Math.random() * Math.PI * 2;
-        const distance = 30 + Math.random() * 70;
-        const size = 14 + Math.random() * 20;
-        const duration = 0.6 + Math.random() * 1;
+//         const angle = Math.random() * Math.PI * 2;
+//         const distance = 30 + Math.random() * 70;
+//         const size = 14 + Math.random() * 20;
+//         const duration = 0.6 + Math.random() * 1;
         
-        particle.style.cssText = `
-            position: fixed;
-            left: ${x}px;
-            top: ${y}px;
-            font-size: ${size}px;
-            color: ${colors[Math.floor(Math.random() * colors.length)]};
-            z-index: 10000;
-            pointer-events: none;
-            transform: translate(0, 0);
-            animation: none;
-        `;
+//         particle.style.cssText = `
+//             position: fixed;
+//             left: ${x}px;
+//             top: ${y}px;
+//             font-size: ${size}px;
+//             color: ${colors[Math.floor(Math.random() * colors.length)]};
+//             z-index: 10000;
+//             pointer-events: none;
+//             transform: translate(0, 0);
+//             animation: none;
+//         `;
         
-        document.body.appendChild(particle);
+//         document.body.appendChild(particle);
         
-        // Animate
-        particle.animate([
-            { 
-                transform: `translate(0, 0) rotate(0deg) scale(1)`,
-                opacity: 1 
-            },
-            { 
-                transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) rotate(360deg) scale(0)`,
-                opacity: 0 
-            }
-        ], {
-            duration: duration * 1000,
-            easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)'
-        }).onfinish = () => particle.remove();
-    }
-}
+//         // Animate
+//         particle.animate([
+//             { 
+//                 transform: `translate(0, 0) rotate(0deg) scale(1)`,
+//                 opacity: 1 
+//             },
+//             { 
+//                 transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) rotate(360deg) scale(0)`,
+//                 opacity: 0 
+//             }
+//         ], {
+//             duration: duration * 1000,
+//             easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)'
+//         }).onfinish = () => particle.remove();
+//     }
+// }
 
 // Add fadeOut animation for feedback
 const style = document.createElement('style');
