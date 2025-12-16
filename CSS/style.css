@@ -497,7 +497,7 @@
             height: 100vh;
             max-height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-                        url(images/ImgBG.jpg) 
+                        url(../images/ImgBG.jpg) 
                         center/cover no-repeat;
             display: flex;
             justify-content: center;
